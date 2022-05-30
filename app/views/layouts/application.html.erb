@@ -10,8 +10,24 @@
   </head>
 
   <body>
-    
-    <nav class="navbar navbar-expand-lg bg-light">
+  
+    <div class="container">
+      <nav class="navbar navbar-expand-sm navbar-light">
+        <a class="navbar-brand" href="/">Home</a>
+          <ul class="navbar-nav ms-auto">
+            <% if @current_user%>
+              <span class="navbar-text"> Logged in as: <%= @current_user["username"]%></span>
+              <a class="nav-link" href="/logout">Logout</a>
+            <% else %>
+              <a class="nav-link" href="/sessions/new">Login</a>
+              <a class="nav-link" href="/users/new">Signup</a>
+            <%end%>
+          </ul>
+      </nav>
+    </div>
+
+  <!--
+    <nav class="navbar navbar-expand-sm bg-light">
      <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
@@ -30,7 +46,10 @@
   </div>
 </nav>
 
-   <!--     
+-->
+
+   
+    <!-- 
     <div class="container pt-4">
       <div class="row">
         <div class="col-sm-9">
@@ -49,9 +68,9 @@
 
       -->
 
-      <div class="row">
+    
 
-      </div>
+      
 
 
 
