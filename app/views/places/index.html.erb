@@ -1,7 +1,4 @@
 
-
-  
-
 <div class="container pt-4">
 
   <h1>Places</h1>
@@ -9,11 +6,11 @@
       <a href="/places/new" class="btn btn-primary">New Place</a>
     </p>
 
-    <ul>
+  
       <% for place in @places %>
-        <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
+        <h5><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></h5>
       <% end %>
-    </ul>
+    
 </div>
  
 
