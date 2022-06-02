@@ -1,17 +1,19 @@
 
 <div class="container pt-4">
-
-  <h1>Places</h1>
-    <p>
-      <a href="/places/new" class="btn btn-primary">New Place</a>
-    </p>
-
+  <div class="pb-4">
+    <h1>Places</h1>
+  </div>
   
-      <% for place in @places %>
-        <h5><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></h5>
-      <% end %>
- 
     
+      <p>
+        <a href="/places/new" class="btn btn-primary">New Place</a>
+      </p>
+
+    
+        <% for place in @places %>
+          <h5><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></h5>
+        <% end %>
+      
 </div>
  
 
