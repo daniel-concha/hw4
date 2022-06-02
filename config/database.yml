@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: concha-travel-journal_production
+  username: concha-travel-journal
+  password: <%= ENV["CONCHA-TRAVEL-JOURNAL_DATABASE_PASSWORD"] %>
